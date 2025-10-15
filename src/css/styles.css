@@ -1,0 +1,42 @@
+* {
+	position:relative;
+}
+body, html {
+	width:100%;
+	height:100%;
+}
+
+body {
+	margin:0;
+	overflow:hidden;
+  background-image: url('https://images.unsplash.com/photo-1726519451119-cc2dd9fdb933?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA1NTE4MTZ8&ixlib=rb-4.1.0&q=85');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+
+#middle, #end {
+	visibility:hidden;
+}
+
+#demo {
+	outline:1px solid red;
+	background:#1d1d1d;
+	width:100vw;
+	height:100vh;
+	overflow:hidden;
+	position: absolute;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 0;
+}
