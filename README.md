@@ -1,43 +1,52 @@
-# Astro Starter Kit: Minimal
 
-```sh
-npm create astro@latest -- --template minimal
+# Fancy GSAP Transitions (Astro Project)
+
+A modern Astro site featuring SVG morphing transitions powered by GSAP and MorphSVGPlugin. The home page animation only plays for returning visitors, using localStorage for session logic.
+
+## 🚀 Features
+
+- SVG morphing transitions with GSAP and MorphSVGPlugin
+- Animation only plays for returning visitors (tracked via localStorage)
+- Smooth content reveal after animation
+- Easily customizable for other pages
+
+## 🗂️ Project Structure
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
 ├── public/
 ├── src/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── morphing-animation.js
 │   └── pages/
-│       └── index.astro
-└── package.json
+│       ├── index.astro
+│       └── about.astro
+├── package.json
+└── README.md
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
 ## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run dev`             | Starts local dev server at `localhost:4323`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 🧩 Animation Logic
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- On first visit, SVG animation is hidden and content is shown immediately.
+- On returning visits, SVG animation plays first, then content is revealed.
+- To test first-visit logic, clear localStorage in your browser console:
+	```js
+	localStorage.removeItem('visitedHome');
+	```
+
+## 👀 Learn More
+
+- [Astro Documentation](https://docs.astro.build)
+- [GSAP Documentation](https://greensock.com/docs/)
+- [MorphSVGPlugin](https://greensock.com/morphSVG/)
