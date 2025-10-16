@@ -28,8 +28,6 @@ export function initMorphingAnimation() {
 
   return main;
 }
-
-// Auto-initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-  initMorphingAnimation();
+addEventListener('load', () => {
+	initMorphingAnimation();
 });

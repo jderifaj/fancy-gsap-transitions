@@ -1,7 +1,8 @@
 import { gsap } from "gsap";
 //timeline for the first morph
 const tl1 = gsap.timeline({defaults:{
-	ease:"none"
+	ease:"none",
+	delay:0.5
 }})
 
 .to("#start1", {morphSVG:"#middle",  duration:0.9})
