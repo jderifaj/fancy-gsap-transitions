@@ -21,6 +21,3 @@ const tl2 = gsap.timeline({defaults:{
 const main = gsap.timeline()
 .add(tl1)
 .add(tl2, 1.3)
-
-// GSDevTools.create({animation:main})
-// gsap.to(".gs-dev-tools", {y:2})

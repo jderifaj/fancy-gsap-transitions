@@ -28,6 +28,16 @@ export function initMorphingAnimation() {
 
   return main;
 }
-addEventListener('load', () => {
-	initMorphingAnimation();
+window.addEventListener('load', () => {
+  const demo = document.getElementById('demo');
+  if (localStorage.getItem('visitedHome')) {
+    // Show SVG and run animation for returning visitors
+    if (demo) demo.style.visibility = 'visible';
+    initMorphingAnimation();
+  } else {
+    // Mark as visited for future visits
+    localStorage.setItem('visitedHome', 'true');
+    // Keep SVG hidden
+    if (demo) demo.style.visibility = 'hidden';
+  }
 });
